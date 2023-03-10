@@ -49,7 +49,7 @@ class Test:
         self.driver.maximize_window()
         self.wait = WebDriverWait(self.driver, 10)
         self.wait.until(EC.presence_of_element_located((By.ID, "user"))).send_keys('admission@unidirect.org')
-        self.wait.until(EC.presence_of_element_located((By.ID, "password"))).send_keys('london2020')
+        self.wait.until(EC.presence_of_element_located((By.ID, "password"))).send_keys('london')
         self.wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="submit"]'))).click()
         error_toast = self.wait.until(EC.presence_of_element_located((By.ID, "toast-container")))
         error_text = error_toast.text
